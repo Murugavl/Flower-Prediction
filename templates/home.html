@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iris Flower Detection</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: #d4a3ae;
+        }
+        .background-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('static/img/flowers.jpeg');
+            background-size: cover;
+            background-position: center;
+            z-index: -1;
+        }
+        .container {
+            text-align: left;
+            background-color: rgba(77, 108, 221, 0.3);
+            padding: 30px;
+            border-radius: 10px;
+            width: 100%;
+            max-width: 400px;
+            box-sizing: border-box;
+        }
+        h1 {
+            color: #fff;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            font-weight: bold;
+            text-align: center;
+        }
+        label {
+            font-size: 1.2rem;
+            color: #fff;
+            margin-bottom: 8px;
+            display: block;
+        }
+        input[type="text"] {
+            padding: 12px;
+            font-size: 1rem;
+            width: 100%;
+            margin-bottom: 15px;
+            border: none;
+            border-radius: 5px;
+            background-color: #fff;
+            color: #333;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            background-color: #6a1b9a;
+            color: white;
+            padding: 12px 20px;
+            font-size: 1.1rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        input[type="submit"]:hover {
+            background-color: #8e24aa;
+        }
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2rem;
+            }
+            input[type="text"] {
+                font-size: 0.9rem;
+                padding: 10px;
+            }
+            input[type="submit"] {
+                font-size: 1rem;
+                padding: 10px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="background-image"></div>
+    <div class="container">
+        <h1>Iris Flower Detection</h1>
+        <form action="{{url_for('home')}}" method="post">
+            <label for="a">First value:</label>
+            <input type="text" id="a" name="a" placeholder="Enter first value" required> <br>
+            <label for="b">Second value:</label>
+            <input type="text" id="b" name="b" placeholder="Enter second value" required> <br>                    
+            <label for="c">Third value:</label>
+            <input type="text" id="c" name="c" placeholder="Enter third value" required> <br>
+            <label for="d">Fourth value:</label>
+            <input type="text" id="d" name="d" placeholder="Enter fourth value" required> <br>
+            <input type="submit" value="Predict">
+        </form>
+    </div>
+</body>
+</html>
