@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction</title>
+    <link rel="stylesheet" href="static/css/styles.css">
+</head>
+<body class="prediction">
+    <div class="container prediction">
+        <h1 class="prediction">Prediction</h1>
+
+        {% if data == 0 %}
+            <h1 class="flower-name">Iris-setosa</h1>
+            <img src="static/img/setosa.jpeg" alt="Iris-setosa">
+        {% elif data == 1 %}
+            <h1 class="flower-name">Iris-versicolor</h1>
+            <img src="static/img/versicolor.jpeg" alt="Iris-versicolor">
+        {% elif data == 2 %}
+            <h1 class="flower-name">Iris-virginica</h1>
+            <img src="static/img/virginica.jpeg" alt="Iris-virginica">
+        {% endif %}
+
+        <br><br>
+        <a href="/">Go back to home page</a>
+    </div>
+</body>
+</html>
+
