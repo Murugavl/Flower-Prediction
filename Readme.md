@@ -1,8 +1,11 @@
 # Flower Prediction
 
-![Flower Prediction](https://path-to-your-image.png)
+![Flower Prediction](static/img/home.png)
 
 Flower Prediction is a machine learning project that classifies iris flowers into three species: Setosa, Versicolor, and Virginica, based on the famous Iris dataset. This repository contains the code for data analysis, model training, evaluation, and deployment using a Flask web application.
+
+## Prediction
+![Flower Prediction](static/img/predict.png)
 
 ## Table of Contents
 
